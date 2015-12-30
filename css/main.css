@@ -73,8 +73,10 @@ li a {
 }
 
 .sites li a.site {
-  display: inline-block;
-  width: 75%;
+  right: 4.5rem;
+  position: absolute;
+  left: 0;
+  padding-left: 2.5rem;
 }
 
 
@@ -142,5 +144,10 @@ li a {
 .rails {
 	background-color: #ef554a;
 	background-image: url('/img/icon-rails.png');
+}
+
+.git {
+  background-color: #ff8b40;
+  background-image: url('/img/icon-git.png');
 }
 

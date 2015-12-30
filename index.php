@@ -85,7 +85,6 @@
 		            }
 		            printf( '<a class="site" href="%1$s" target="_blank">%2$s</a>', $siteroot, $displayname );
 
-
 					// Display an icon with a link to the admin area
 					$adminurl = '';
 					// We'll start by checking if the site looks like it's a WordPress site
@@ -108,6 +107,10 @@
                     $sitetype = 'admin';
 
                   printf( '<a class="%2$s icon" href="%1$s" target="_blank">Admin</a>', $adminurl, $sitetype );
+                }
+
+                if (isset($siteoptions[$project]) &&  is_array( $siteoptions[$project] ) && array_key_exists( 'git-repo', $siteoptions[$project] ) ) {
+                  printf( '<a class="git icon" href="%1$s" target="_blank">Repo</a>', $siteoptions[$project]['git-repo'] );
                 }
 
 		            echo '</li>';
