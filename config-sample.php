@@ -34,10 +34,10 @@ $icondirs = array( 'app/assets/images/', 'public/', '' );
 *
 */
 $devtools = array(
-//	array( 'name' => 'Tool', 'url' => 'http://example.com/' ),
-	array( 'name' => 'Web Host Admin', 'url' => 'http://my.webfaction.com/' ),
-	array( 'name' => 'Github', 'url' => 'http://github.com/jmorais' ),
-	);
+//  array( 'name' => 'Tool', 'url' => 'http://example.com/' ),
+  array( 'name' => 'Web Host Admin', 'url' => 'http://my.webfaction.com/' ),
+  array( 'name' => 'Github', 'url' => 'http://github.com/jmorais' ),
+  );
 
 /*
 *
@@ -55,9 +55,9 @@ $devtools = array(
 */
 $siteoptions = array(
 //  'dirname' => 'Display Name',
-//	'dirname' => array( 'displayname' => 'DisplayName', 'adminurl' => 'http://something/admin' ),
+//  'dirname' => array( 'displayname' => 'DisplayName', 'adminurl' => 'http://something/admin', 'git-repo' => 'http://github.com/something/repo' ),
 
-	);
+  );
 
 /*
 *
