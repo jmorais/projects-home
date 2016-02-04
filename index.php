@@ -84,18 +84,13 @@
           if (isset($siteoptions[$project]) &&  is_array( $siteoptions[$project] ) && array_key_exists( 'adminurl', $siteoptions[$project] ) )
             $adminurl = $siteoptions[$project]['adminurl'];
 
-          // If there's an admin url then we'll show it - the icon will depend on whether it looks like WP or not
-          if ( ! empty( $adminurl ) ) {
 
-            if (is_dir( $file . '/wp-admin' ))
-              $sitetype = 'wordpress';
-            elseif (is_dir( $file . '/app' ))
-              $sitetype = 'rails';
-            else
-              $sitetype = 'admin';
-
-            // printf( '<a class="%2$s icon" href="%1$s" target="_blank">Admin</a>', $adminurl, $sitetype );
-          }
+          if (is_dir( $file . '/wp-admin' ))
+            $sitetype = 'wordpress';
+          elseif (is_dir( $file . '/app' ))
+            $sitetype = 'rails';
+          else
+            $sitetype = 'html';
 
           $project_property = array();
 
@@ -184,6 +179,9 @@
                       <a class="link-title" href="<?php echo $project['url']; ?>" target='_blank'>
                         <h3 class="title"><?php echo $project['fullname']; ?></h3>
                         <span class="project-type"><?php echo $project['type']; ?></span>
+                        <?php if (false)://(array_key_exists('git-repo', $project)): ?>
+                          <span class="project-type"><a href="<?php echo $project['git-repo']; ?>" target="_blank">GIT REPO</a></span>
+                        <?php endif; ?>
                       </a>
 
                       <div class="text-wrap-color" style="background-color: <?php echo $project['color']; ?>"></div>
@@ -218,6 +216,9 @@
                       <a class="link-title" href="<?php echo $project['url']; ?>" target='_blank'>
                         <h3 class="title"><?php echo $project['fullname']; ?></h3>
                         <span class="project-type"><?php echo $project['type']; ?></span>
+                        <?php if (false)://(array_key_exists('git-repo', $project)): ?>
+                          <span class="project-type"><a href="<?php echo $project['git-repo']; ?>" target="_blank">GIT REPO</a></span>
+                        <?php endif; ?>
                       </a>
 
                       <div class="text-wrap-color" style="background-color: <?php echo $project['color']; ?>"></div>
@@ -252,6 +253,9 @@
                       <a class="link-title" href="<?php echo $project['url']; ?>" target='_blank'>
                         <h3 class="title"><?php echo $project['fullname']; ?></h3>
                         <span class="project-type"><?php echo $project['type']; ?></span>
+                        <?php if (false)://(array_key_exists('git-repo', $project)): ?>
+                          <span class="project-type"><a href="<?php echo $project['git-repo']; ?>" target="_blank">GIT REPO</a></span>
+                        <?php endif; ?>
                       </a>
 
                       <div class="text-wrap-color" style="background-color: <?php echo $project['color']; ?>"></div>
