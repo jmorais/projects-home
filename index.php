@@ -18,6 +18,12 @@
 
   <body>
 
+    <nav class="main-navbar">
+      <div class="container">
+        <input type="text" id="search" class="form-control" autofocus>
+      </div>
+    </nav>
+
     <?php
 
       $projects = array();
@@ -138,9 +144,9 @@
             $rowcolorclass = '';
 
             if ($rowcolor == 0) {
-              $rowcolorclass = 'light';
+              $rowcolorclass = 'even';
             } else {
-              $rowcolorclass = 'dark';
+              $rowcolorclass = 'odd';
             }
 
             ?>
@@ -273,6 +279,9 @@
 
       </div>
     </section>
+
+    <script src="js/jquery.js" charset="utf-8"></script>
+    <script src="js/main.js" charset="utf-8"></script>
   </body>
 </html>
 
