@@ -184,11 +184,20 @@
                     <div class="text-wrap-inner">
                       <a class="link-title" href="<?php echo $project['url']; ?>" target='_blank'>
                         <h3 class="title"><?php echo $project['fullname']; ?></h3>
-                        <span class="project-type"><?php echo $project['type']; ?></span>
-                        <?php if (false)://(array_key_exists('git-repo', $project)): ?>
-                          <span class="project-type"><a href="<?php echo $project['git-repo']; ?>" target="_blank">GIT REPO</a></span>
-                        <?php endif; ?>
                       </a>
+
+                      <div class="links-wrap">
+
+                        <?php if($project['type'] == 'wordpress'): ?>
+                          <span class="project-type"><a href="<?php echo $project['url'].'/wp-admin'; ?>" target="_blank">wordpress</a></span>
+                        <?php else: ?>
+                          <span class="project-type"><?php echo $project['type']; ?></span>
+                        <?php endif; ?>
+
+                        <?php if (array_key_exists('git-repo', $project)): ?>
+                          <span class="project-type git-repo"><a href="<?php echo $project['git-repo']; ?>" target="_blank">GIT REPO</a></span>
+                        <?php endif; ?>
+                      </div>
 
                       <div class="text-wrap-color" style="background-color: <?php echo $project['color']; ?>"></div>
                     </div>
@@ -221,11 +230,20 @@
                     <div class="text-wrap-inner">
                       <a class="link-title" href="<?php echo $project['url']; ?>" target='_blank'>
                         <h3 class="title"><?php echo $project['fullname']; ?></h3>
-                        <span class="project-type"><?php echo $project['type']; ?></span>
-                        <?php if (false)://(array_key_exists('git-repo', $project)): ?>
-                          <span class="project-type"><a href="<?php echo $project['git-repo']; ?>" target="_blank">GIT REPO</a></span>
-                        <?php endif; ?>
                       </a>
+
+                      <div class="links-wrap">
+
+                        <?php if($project['type'] == 'wordpress'): ?>
+                          <span class="project-type"><a href="<?php echo $project['url'].'/wp-admin'; ?>" target="_blank">wordpress</a></span>
+                        <?php else: ?>
+                          <span class="project-type"><?php echo $project['type']; ?></span>
+                        <?php endif; ?>
+
+                        <?php if (array_key_exists('git-repo', $project)): ?>
+                          <span class="project-type git-repo"><a href="<?php echo $project['git-repo']; ?>" target="_blank">GIT REPO</a></span>
+                        <?php endif; ?>
+                      </div>
 
                       <div class="text-wrap-color" style="background-color: <?php echo $project['color']; ?>"></div>
                     </div>
@@ -258,11 +276,20 @@
                     <div class="text-wrap-inner">
                       <a class="link-title" href="<?php echo $project['url']; ?>" target='_blank'>
                         <h3 class="title"><?php echo $project['fullname']; ?></h3>
-                        <span class="project-type"><?php echo $project['type']; ?></span>
-                        <?php if (false)://(array_key_exists('git-repo', $project)): ?>
-                          <span class="project-type"><a href="<?php echo $project['git-repo']; ?>" target="_blank">GIT REPO</a></span>
-                        <?php endif; ?>
                       </a>
+
+                      <div class="links-wrap">
+
+                        <?php if($project['type'] == 'wordpress'): ?>
+                          <span class="project-type"><a href="<?php echo $project['url'].'/wp-admin'; ?>" target="_blank">wordpress</a></span>
+                        <?php else: ?>
+                          <span class="project-type"><?php echo $project['type']; ?></span>
+                        <?php endif; ?>
+
+                        <?php if (array_key_exists('git-repo', $project)): ?>
+                          <span class="project-type git-repo"><a href="<?php echo $project['git-repo']; ?>" target="_blank">GIT REPO</a></span>
+                        <?php endif; ?>
+                      </div>
 
                       <div class="text-wrap-color" style="background-color: <?php echo $project['color']; ?>"></div>
                     </div>

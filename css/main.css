@@ -4181,7 +4181,6 @@ fieldset[disabled] .btn-success.active {
     padding: 5px 15px;
     border: 1px solid #aaa;
     border-radius: 4px;
-    margin-top: 10px;
     color: #383939; }
   .project .image-wrap {
     padding: 2em; }
@@ -4456,15 +4455,23 @@ fieldset[disabled] .btn-success.active {
       vertical-align: middle;
       background-color: #f5f5f5; }
       .project .text-wrap .text-wrap-inner {
-        display: table-row; }
+        display: table-cell;
+        height: 110px;
+        vertical-align: middle;
+       }
+
         .project .text-wrap .text-wrap-inner .link-title {
-          display: table-cell;
-          vertical-align: middle;
-          width: 100%;
-          height: 110px; }
+
+        }
           .project .text-wrap .text-wrap-inner .link-title h3 {
             line-height: 1.5em;
             font-size: 18px; }
+
+        .project .text-wrap .text-wrap-inner .links-wrap {
+          margin-top: 10px;
+        }
+
+
       .project .text-wrap .text-wrap-color {
         position: absolute;
         left: 0;
@@ -4504,3 +4511,4 @@ fieldset[disabled] .btn-success.active {
   outline: none;
   box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
 }
+
