@@ -3,3 +3,4 @@ img/screenshots/*
 config.php
 !img/favicons/home.png
 !img/screenshots/default-*.png
+.DS_Store

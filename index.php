@@ -26,6 +26,9 @@
 
     <?php
 
+      $is_xipio = strpos($_SERVER['HTTP_HOST'], 'xip.io') !== false;
+      $xipio_addr = str_replace("home.", "", $_SERVER['HTTP_HOST']);
+
       $projects = array();
 
       foreach ( $dir as $d ) {
@@ -39,8 +42,12 @@
 
           if ( in_array( $project, $hiddensites ) ) continue;
 
-
-          $siteroot = sprintf( 'http://%1$s.%3$s', $project, $dirname, $tld );
+          
+          if ($is_xipio) {
+            $siteroot = sprintf( 'http://%1$s.%2$s', $project, $xipio_addr );
+          } else {
+            $siteroot = sprintf( 'http://%1$s.%2$s', $project, $tld );
+          }
 
           // Display an icon for the site
           $icon_output = '<span class="no-img"></span>';
@@ -164,6 +171,7 @@
               <?php endif; ?>
 
                 <div class="project <?php echo $rowcolorclass; ?>">
+                  <div style="display: none;"><?php echo $project['name'] . ".test"; ?></div>
                   <div class="image-wrap">
 
                     <a href="<?php echo $project['url']; ?>" target='_blank'>
@@ -210,6 +218,7 @@
               <div class="col-md-4">
 
                 <div class="project <?php echo $rowcolorclass; ?>">
+                  <div style="display: none;"><?php echo $project['name'] . ".test"; ?></div>
                   <div class="image-wrap">
 
                     <a href="<?php echo $project['url']; ?>" target='_blank'>
@@ -256,6 +265,7 @@
             <?php else: ?>
               <div class="col-md-4">
                 <div class="project <?php echo $rowcolorclass; ?>">
+                  <div style="display: none;"><?php echo $project['name'] . ".test"; ?></div>
                   <div class="image-wrap">
 
                     <a href="<?php echo $project['url']; ?>" target='_blank'>
